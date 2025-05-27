@@ -1,16 +1,4 @@
-:root {
-  --color-primary: #ff6600;
-  --color-primary-dark: #e65c00;
-  --color-bg: #f4f4f4;
-  --color-text: #333;
-  --color-header-bg: #333;
-  --color-header-link-bg: #444;
-  --color-header-link-hover-bg: #555;
-  --color-footer-bg: #111;
-  --color-footer-text: #ccc;
-  --color-footer-link-hover: #fff;
-}
-
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +8,8 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 a {
@@ -31,7 +19,7 @@ a {
 
 /* Header */
 header {
-  background-color: var(--color-header-bg);
+  background-color: #333;
   color: #fff;
   padding: 20px 0;
 }
@@ -40,48 +28,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   width: 90%;
   margin: auto;
-  padding: 0 15px;
+  height: 20px;
 }
 
 .logo {
-  width: 120px;
-  height: auto;
-}
-
-nav {
-  position: relative;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  width: 25px;
-  height: 20px;
-  justify-content: space-between;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: translateY(8.5px) rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-8.5px) rotate(-45deg);
+  width: 55px;
+  height: 66px;
+  left:50px;
+  border: #111;
 }
 
 .nav-links {
@@ -92,33 +48,13 @@ nav {
 
 .nav-links a {
   padding: 8px 12px;
-  background: var(--color-header-link-bg);
+  background: #444;
   border-radius: 4px;
   transition: background 0.3s;
 }
 
 .nav-links a:hover {
-  background: var(--color-header-link-hover-bg);
-}
-
-/* Responsive Navigation */
-.nav-links.open {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: var(--color-header-bg);
-  width: 200px;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.nav-links.open li {
-  margin: 10px 0;
-  text-align: center;
+  background: #555;
 }
 
 /* Hero Section */
@@ -130,51 +66,54 @@ nav {
   align-items: center;
   color: #fff;
   text-align: center;
-  padding: 0 20px;
 }
 
-.hero-content h2 {
-  font-size: 3rem;
+.hero-content h1 {
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.125rem;
+  font-size: 18px;
   margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .cta-btn {
-  background-color: var(--color-primary);
+  background-color: #ff6600;
   padding: 12px 24px;
-  font-size: 1rem;
+  font-size: 16px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  display: inline-block;
 }
 
 .cta-btn:hover {
-  background-color: var(--color-primary-dark);
+  background-color: #e65c00;
 }
 
 /* Footer */
 footer {
-  background-color: var(--color-footer-bg);
-  color: var(--color-footer-text);
+  background-color: #111;
+  color: #ccc;
   text-align: center;
-  padding: 20px 15px;
+  padding: 20px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .social-links a {
-  margin: 0 10px;
-  color: var(--color-footer-text);
+  color: #ccc;
   transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color: var(--color-footer-link-hover);
+  color: #fff;
 }
 
 /* Media Queries */
@@ -182,41 +121,23 @@ footer {
   .container {
     flex-direction: column;
     text-align: center;
-    padding: 0 10px;
   }
 
   .nav-links {
-    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  .nav-links.open {
-    display: flex;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem;
+  .hero-content h1 {
+    font-size: 32px;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .logo {
     margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero-content p {
-    font-size: 0.9rem;
-  }
-
-  .cta-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
   }
 }
