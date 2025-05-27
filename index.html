@@ -3,33 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Landing Page</title>
   <link rel="stylesheet" href="Style.css" />
+  <title>MyBrand Landing Page</title>
 </head>
 <body>
   <header>
     <div class="container">
-      <a href="#"><img src="logo.png" alt="MyBrand Logo" class="logo" /></a>
-
+      <a href="">
+        <img src="logo.png" alt="logo brand" class="logo" />
+      </a>
       <nav>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="#">Service</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero section">
     <div class="hero-content">
-      <h2>Welcome to MyBrand</h2>
+      <h1>Welcome to mybrand</h1>
       <p>We create amazing web experiences for startups and businesses.</p>
       <a href="#" class="cta-btn">Get Started</a>
     </div>
@@ -37,21 +33,12 @@
 
   <footer>
     <p>© 2025 MyBrand. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Twitter</a>
-    </div>
+    <ul class="social-links">
+      <li><a href="#">Github</a></li>
+      <li><a href="#">Linkedin</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
   </footer>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
